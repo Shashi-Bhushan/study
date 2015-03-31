@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Data">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Label"
+                        name="./title"
+                        xtype="textfield"/>
+                    <subHeading
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Sub Heading"
+                        name="./subHeading"
+                        xtype="textarea"/>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Description"
+                        name="./desc"
+                        xtype="textarea"/>
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="multifield"/>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Slides Data">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <Title
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Title"
+                        name="./title"
+                        xtype="textfield"/>
+                    <icon
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Select the icon"
+                        name="./icon"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <icon1
+                                jcr:primaryType="nt:unstructured"
+                                text="icon 1"
+                                value="icn1"/>
+                            <icon2
+                                jcr:primaryType="nt:unstructured"
+                                text="icon 2"
+                                value="icn2"/>
+                            <icon3
+                                jcr:primaryType="nt:unstructured"
+                                text="icon 3"
+                                value="icn3"/>
+                            <icon4
+                                jcr:primaryType="nt:unstructured"
+                                text="Icon 4"
+                                value="icn4"/>
+                            <icon5
+                                jcr:primaryType="nt:unstructured"
+                                text="Icon 5"
+                                value="icn5"/>
+                        </options>
+                    </icon>
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Description"
+                        name="./desc"
+                        xtype="textarea"/>
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="multifield"/>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+</jcr:root>
