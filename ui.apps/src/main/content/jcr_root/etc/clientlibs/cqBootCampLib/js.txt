@@ -1,8 +1,11 @@
-
 js/main.js
 js/newsFeed.js
 js/myjs.js
+<<<<<<< HEAD
 js/management.js
 
 
+=======
+js/validate.js
+>>>>>>> CustomTag and SignUp component
 
