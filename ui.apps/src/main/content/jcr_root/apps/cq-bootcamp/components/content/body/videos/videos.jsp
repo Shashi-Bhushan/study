@@ -7,23 +7,23 @@
     </h1>
     <div>
         <input type="text" name="searchBar" placeholder="Search Channel"/>
-        <p>Order By
-        <select class="orderBy">
-            <option value="relevance">Relevance</option>
-            <option value="published">Published</option>
-            <option value="viewCount">View Count</option>
-            <option value="rating">Rating</option>
-        </select></p>
-        <p>Number of Videos
-        <select class="numVideos" id="numVideos">
-        </select>
-        </p>
+
     </div>
     <div class="mediaVideoWrapper" id="page_container">
-
-
-
-
+        <p>Order By
+            <select class="orderBy">
+                <option value="relevance">Relevance</option>
+                <option value="published">Published</option>
+                <option value="viewCount">View Count</option>
+                <option value="rating">Rating</option>
+            </select>
+            Max No. of Videos
+            <select class="numVideos" id="numVideos">
+            </select>
+            Year
+            <select class="year">
+            </select>
+        </p>
 			<script id="video-template">
                 <ul class="youtubeClass content">
                             {#names}
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
     // on change of select box or search box
-    jQuery('input[name="searchBar"],.numVideos,.orderBy').change(function(){
+    jQuery('input[name="searchBar"],.numVideos,.orderBy,.year').change(function(){
         jQuery().showResultsOnPage({"search" : $('input[name="searchBar"]').val(),"videos" : $(".numVideos").val(),"channel" :"${properties.channelName}" , "orderBy" : $(".orderBy").val() });
     });
 });

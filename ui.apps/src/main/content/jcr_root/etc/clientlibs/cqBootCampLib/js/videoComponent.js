@@ -2,6 +2,11 @@ $(document).ready(function () {
     var data = {
     	"names": []
 	}
+
+    var yearEnum = {
+        "years" : []
+    }
+
 	var searchNumber ;
     var source   = $("#video-template").html();
     var compiled = dust.compile(source, "intro");
@@ -15,13 +20,37 @@ $(document).ready(function () {
     $(".mediaVideo").fancybox();
 
     //create function to add data in jsonObject
-	jQuery.fn.updateJSON = function (id,title,image) {
-        data.names.push({ "image": image,"id": id,"title": title });
+	jQuery.fn.updateJSON = function (id,title,image,year) {
+        data.names.push({ "image": image,"id": id,"title": title ,"year" : year});
     };
+    //create function to add data in yearEnum
+    jQuery.fn.updateYearSelectBox = function (year) {
+        // first check that year doesn't already exists
+        if( $.inArray(year , yearEnum.years ) == -1 ){
+            $(".year").append("<option>"+year+"</option>");
+            yearEnum.years.push(year);
+        }
+    };
+
 
     //renders the JSON object
     jQuery.fn.renderData = function(){
-		dust.render("intro", data, function(err, out) {
+		// json array to be rendered
+        var renderData = {
+            "names" : []
+        };
+
+        // iterate over array
+        $(data.names).each(function(index){
+            // if year of video is same as the year displayed
+            if(data.names[index].year == $(".year").val()){
+                // push it
+                renderData.names.push( data.names[index] );
+            }
+        });
+
+        // render the data
+        dust.render("intro", renderData, function(err, out) {
        		$("#output").html(out);
   		});
     };
@@ -40,17 +69,12 @@ $(document).ready(function () {
         }
 
         // initialize searchQuery with author name and json format info
-		var searchQuery = 'http://gdata.youtube.com/feeds/api/videos?author='+obj.channel+'&orderby='+obj.orderBy+'&v=2.1&alt=jsonc';
+		var searchQuery = 'http://gdata.youtube.com/feeds/api/videos?author='+obj.channel+'&orderby='+obj.orderBy+'&max-results='+obj.videos+'&v=2.1&alt=jsonc';
 
-        // provide default values
-        if(obj.videos != undefined){
-			searchQuery = searchQuery + ("&max-results="+obj.videos);
-        }
         if(obj.search != ""){
 			searchQuery = searchQuery + ("&q="+obj.search);
         }
 
-console.log(searchQuery);
         $.ajax({
             type : "GET" ,
             url : searchQuery,
@@ -86,10 +110,15 @@ console.log(searchQuery);
                     var desc = items[index].description;
                     var id = items[index].id;
                     var image = items[index].thumbnail.hqDefault;
+                    var year = items[index].uploaded.substr(0,4);
 
                     // update json with the data for each iteration
-					jQuery().updateJSON(id,title,image);
+					jQuery().updateJSON(id,title,image,year);
+
+                    // update year enum
+                    jQuery().updateYearSelectBox(year);
                 });
+
                 // renders JSON data on page
 				jQuery().renderData();
 
@@ -104,11 +133,5 @@ console.log(searchQuery);
             	$(".errorDiv").fadeOut('slow');
             }
         });
-
     };
-
 });
-
-
-
-

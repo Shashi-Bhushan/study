@@ -1,14 +1,11 @@
 .twoColRight .mediaVideoWrapper {
-	float: left;
 	width: 100%;
 }
 .twoColRight .mediaVideoWrapper select {
-	float: right;
-	width: 80px;
 	margin-top: -46px;
 }
 .twoColRight .mediaVideoWrapper p {
-    margin-left: 70%;
+    margin-left: 35%;
     font-size: 16px;
     margin-bottom: 18px;
 }
