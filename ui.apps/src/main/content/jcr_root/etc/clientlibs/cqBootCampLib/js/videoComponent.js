@@ -40,7 +40,7 @@ $(document).ready(function () {
         }
 
         // initialize searchQuery with author name and json format info
-		var searchQuery = 'http://gdata.youtube.com/feeds/api/videos?author='+obj.channel+'&orderby=published&v=2.1&alt=jsonc';
+		var searchQuery = 'http://gdata.youtube.com/feeds/api/videos?author='+obj.channel+'&orderby='+obj.orderBy+'&v=2.1&alt=jsonc';
 
         // provide default values
         if(obj.videos != undefined){
