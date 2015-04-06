@@ -1,6 +1,8 @@
 <%@include file="/apps/cq-bootcamp/global.jsp" %>
 <%@page session="false" %>
 
+<cq:includeClientLib categories="cq.bootcamp.dust"/>
+
 <div class="twoColRight" style="padding:5px">
 	<h1>
     	<cq:text property="title" placeholder="Edit to Enter Title" default="Default Value"/>

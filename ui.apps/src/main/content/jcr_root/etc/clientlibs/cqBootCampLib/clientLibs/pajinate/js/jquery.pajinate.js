@@ -1,4 +1,7 @@
-console.log("pajinate");
+/*
+ * Pajinate jQuery plugin
+ * https://github.com/wesnolte/Pajinate
+ */
 ;
 (function($) { /*******************************************************************************************/
 	// jquery.pajinate.js - version 0.4
