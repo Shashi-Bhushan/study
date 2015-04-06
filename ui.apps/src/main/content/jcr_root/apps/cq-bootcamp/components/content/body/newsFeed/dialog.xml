@@ -6,9 +6,17 @@
         jcr:primaryType="cq:Widget"
         xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
-            <tab1
+            <news-tab
                 jcr:primaryType="cq:Panel"
-                title="News Feed"/>
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <pathfield
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the path of News Feed"
+                        name="./newspath"
+                        xtype="pathfield"/>
+                </items>
+            </news-tab>
         </items>
     </items>
 </jcr:root>
