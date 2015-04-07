@@ -10,7 +10,7 @@ public class IsEditMode extends BodyTagSupport{
     public int doStartTag() {
         SlingHttpServletRequest request = getRequest(pageContext);
         WCMMode wcmMode=WCMMode.fromRequest(request);
-        if (wcmMode==WCMMode.EDIT)
+        if (wcmMode == WCMMode.EDIT)
         {
             return(EVAL_BODY_INCLUDE);
         } else {
@@ -18,5 +18,9 @@ public class IsEditMode extends BodyTagSupport{
         }
     }
 }
+
+
+
+
 
 

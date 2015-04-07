@@ -25,10 +25,15 @@ public class CustomTags extends SimpleTagSupport {
     }
     public void doTag() throws JspException, IOException {
         String sentence;
-        sentence=sentence1.concat(sentence2);
-        PageContext pageContext=(PageContext)getJspContext();
-        JspWriter out =pageContext.getOut();
+        sentence = sentence1.concat(sentence2);
+        PageContext pageContext = (PageContext)getJspContext();
+        JspWriter out = pageContext.getOut();
         out.write(sentence);
 
     }
-   }
+}
+
+
+
+
+
