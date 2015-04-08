@@ -1,29 +1,23 @@
-$(document).ready(function () {
-    //alert("My JS");
-    console.log($('.spotlightWrapper'));
-    console.log($('.spotlightWrapper .slick-slider'));
 
-    $('.spotlightWrapper .slick-slider').slick({
-        dots: true,
-        arrows: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
+    $(document).ready(function () {
+        var stockName = $("#stockName").val();
+        var stockStatus;
+
+        $.ajax({
+            type: "get",
+            url: "http://finance.google.com/finance/info?client=ig&q=" + stockName,
+            success: function (data) {
+                data = data.slice(3);
+                var jsonObj = JSON.parse(data);
+                if (jsonObj[0].c_fix > 0)
+                    stockStatus = "up";
+                else
+                    stockStatus = "down";
+                $('.nseValue').append(jsonObj[0].l_cur + "<i class='fa fa-arrow-" + stockStatus + "'></i></div>");
+
             },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            error: function (data) {
+                console.log("Error Occured");
             }
-        ]
+        });
     });
-
-});

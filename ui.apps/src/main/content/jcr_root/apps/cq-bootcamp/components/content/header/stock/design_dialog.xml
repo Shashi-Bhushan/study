@@ -8,7 +8,7 @@
             jcr:primaryType="cq:Widget"
             xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
-            <tab1
+            <Stock
                     jcr:primaryType="cq:Panel"
                     title="Stock">
                 <items jcr:primaryType="cq:WidgetCollection">
@@ -17,30 +17,8 @@
                             fieldLabel="Enter The Stock Name"
                             name="./stockName"
                             xtype="textfield"/>
-                    <stockPrice
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Enter the Stock Price"
-                            name="./stockPrice"
-                            xtype="textfield"/>
-                    <status
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Stock Status"
-                            name="./status"
-                            type="select"
-                            xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <up
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Going Up"
-                                    value="up"/>
-                            <down
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Going Down"
-                                    value="down"/>
-                        </options>
-                    </status>
                 </items>
-            </tab1>
+            </Stock>
         </items>
     </items>
 </jcr:root>
