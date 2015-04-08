@@ -187,7 +187,7 @@
 }
 
 .hpCarouselBg .slick-prev, .hpCarouselBg .slick-next, .hpCarouselBg .slick-prev:hover, .hpCarouselBg .slick-next:hover {
-    background: url(/content/dam/cq-bootcamp/home-pg-carousel-arrow.png) 0 0 no-repeat;
+    background: url(../img/home-pg-carousel-arrow.png) 0 0 no-repeat;
     width: 19px;
     height: 56px;
     top: 45%;
@@ -226,7 +226,7 @@
     background: #e02626;
     right: 0px;
     top: 55px;
-    background: url(/content/dam/cq-bootcamp/hp-carousel-icon-sprite.png) #e02626 50% 0 no-repeat;
+    background: url(../img/hp-carousel-icon-sprite.png) #e02626 50% 0 no-repeat;
 }
 
 .hpCarouselBgIcon.icn1 {
@@ -375,7 +375,7 @@
     min-height: 65px;
     border-bottom: #d1d1d1 solid 1px;
     padding: 10px 0 10px 15%;
-    background: url(/content/dam/cq-bootcamp/havells-connect-sprite.png) left top no-repeat;
+    background: url(../img/havells-connect-sprite.png) left top no-repeat;
 }
 
 .havellsConnectBg .havellsConnectOptionWrapper ul li:last-child {
