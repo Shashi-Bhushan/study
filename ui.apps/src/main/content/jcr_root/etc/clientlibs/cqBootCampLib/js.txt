@@ -1,3 +1,4 @@
+js/dealer.js
 js/main.js
 js/newsFeed.js
 js/myjs.js
