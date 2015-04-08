@@ -1,4 +1,6 @@
 
 js/main.js
-js/myjs.js
+js/newsFeed.js
+
+
 

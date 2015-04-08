@@ -2,7 +2,9 @@
 <%@page session="false" %>
 
 <div class="clearFix"></div>
-<cq:include path="HeroCarouselContainerParsys" resourceType="foundation/components/parsys"/>
+<div>
+    <cq:include path="HeroCarouselContainerParsys" resourceType="foundation/components/parsys"/>
+</div>
 
 <div class="homePageWrapper">
     <div class="container">

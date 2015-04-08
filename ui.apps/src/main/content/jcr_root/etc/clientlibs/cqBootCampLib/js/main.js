@@ -1,4 +1,4 @@
-console.log("main.js");
+
 var winW = $(window).width();
 $(function () {
     var glbFlgMblTrg = 0;

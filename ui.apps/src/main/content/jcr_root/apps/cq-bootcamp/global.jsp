@@ -82,8 +82,10 @@
 <c:choose>
     <c:when test="${mode}">
         <c:set var="height" value="height"/>
+        <c:set var="heroCarouselHeight" value="567px"/>
     </c:when>
     <c:otherwise>
+        <c:set var="heroCarouselHeight" value="auto"/>
         <c:set var="auto" value="auto"/>
         <c:set var="height" value="auto"/>
     </c:otherwise>
