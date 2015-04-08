@@ -9,12 +9,14 @@
 </div>
 <div class="col">
     <h2>Products</h2>
+
     <div class="subHeadWrap">
         <div class="subHead"><cq:text property="title" placeholder="Edit to Enter Title" default="Appliances"/></div>
     </div>
     <p><cq:text property="desc"
                 placeholder="Edit to Enter a Description"
                 default="Welcome to the world of fresh living with our range of domestic appliances. These appliances will help you discover the joy of fresh eating and living."/></p>
+
     <div class="buttonWrapper">
         <c:forEach items="${properties.links}" var="link">
             <div class="buttonGlbl"><a href="javascript:;"><span><i class="fa fa-arrow-right"></i> ${link}</span></a>

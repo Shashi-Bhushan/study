@@ -6,7 +6,8 @@
         <div class="spotlightWrapper ; ">
             <div class="slick-slider">
                 <c:forEach var="i" begin="1" end="${properties.slides}">
-                    <cq:include path="heroCarousel${i}" resourceType="cq-bootcamp/components/content/body/carouselHeroSlide"/>
+                    <cq:include path="heroCarousel${i}"
+                                resourceType="cq-bootcamp/components/content/body/carouselHeroSlide"/>
                 </c:forEach>
             </div>
         </div>
@@ -16,7 +17,8 @@
         <c:forEach var="i" begin="1" end="${properties.slides}">
             <div class="spotlightWrapper">
                 <div class="slick-slider">
-                    <cq:include path="heroCarousel${i}" resourceType="cq-bootcamp/components/content/body/carouselHeroSlide"/>
+                    <cq:include path="heroCarousel${i}"
+                                resourceType="cq-bootcamp/components/content/body/carouselHeroSlide"/>
                 </div>
             </div>
         </c:forEach>
@@ -26,21 +28,21 @@
 </c:choose>
 
 <c:if test="${mode}">
-<script>
-    $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-        $('.spotLightWrapper .slick-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            $('.spotLightWrapper .slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
 
-            dots: true,
-            arrows: false
+                dots: true,
+                arrows: false
 
+            });
+
+            // get dots within the image itself
+            $('.slick-dots').css("bottom", "0px");
+            $('.spotLightWrapper').css("height", "768px");
         });
-
-        // get dots within the image itself
-        $('.slick-dots').css("bottom", "0px");
-        $('.spotLightWrapper').css("height", "768px");
-    });
-</script>
+    </script>
 </c:if>

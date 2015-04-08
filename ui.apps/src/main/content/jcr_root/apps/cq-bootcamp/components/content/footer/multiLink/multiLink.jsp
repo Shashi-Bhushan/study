@@ -9,7 +9,7 @@
 
 <div class="linkWrapper">
     <c:forEach items="${currentStyle.multiLink}" var="link" varStatus="loop">
-    	<a href="javascript:;">${link}</a> 
-	</c:forEach>
+        <a href="javascript:;">${link}</a>
+    </c:forEach>
 </div>
-<div  class="clearFix"></div>
+<div class="clearFix"></div>

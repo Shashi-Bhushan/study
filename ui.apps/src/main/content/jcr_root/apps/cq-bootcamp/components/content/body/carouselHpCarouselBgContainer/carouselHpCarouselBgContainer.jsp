@@ -20,30 +20,30 @@
 
 
 <c:if test="${mode}">
-<script>
-    $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-        $('.hpCarouselBg .slick-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            $('.hpCarouselBg .slick-slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
 
-            dots: false,
-            arrows: true
+                dots: false,
+                arrows: true
+
+            });
+
+            // making buttons persist on mouse out also
+            var prevObj = $('.hpCarouselBg .slick-prev');
+            prevObj.mouseenter(function () {
+                prevObj.css('background', 'url(/content/dam/cq-bootcamp/home-pg-carousel-arrow.png) 0 0 no-repeat');
+            });
+            var nextObj = $('.hpCarouselBg .slick-next');
+            nextObj.mouseenter(function () {
+                nextObj.css('background', 'url(/content/dam/cq-bootcamp/home-pg-carousel-arrow.png) 0 0 no-repeat');
+                nextObj.css('right', '10px');
+                nextObj.css('background-position', '-19px 0');
+            });
 
         });
-
-        // making buttons persist on mouse out also
-        var prevObj = $('.hpCarouselBg .slick-prev');
-        prevObj.mouseenter(function () {
-            prevObj.css('background', 'url(/content/dam/cq-bootcamp/home-pg-carousel-arrow.png) 0 0 no-repeat');
-        });
-        var nextObj = $('.hpCarouselBg .slick-next');
-        nextObj.mouseenter(function () {
-            nextObj.css('background', 'url(/content/dam/cq-bootcamp/home-pg-carousel-arrow.png) 0 0 no-repeat');
-            nextObj.css('right', '10px');
-            nextObj.css('background-position', '-19px 0');
-        });
-
-    });
-</script>
+    </script>
 </c:if>

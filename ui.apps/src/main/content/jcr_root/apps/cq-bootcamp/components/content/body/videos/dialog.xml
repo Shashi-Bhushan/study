@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="cq:Dialog"
-    title="dialog"
-    xtype="dialog">
+          jcr:primaryType="cq:Dialog"
+          title="dialog"
+          xtype="dialog">
     <items
-        jcr:primaryType="cq:Widget"
-        xtype="tabpanel">
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
-                jcr:primaryType="cq:Panel"
-                title="Channel Information">
+                    jcr:primaryType="cq:Panel"
+                    title="Channel Information">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <channelName
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="TimeWarnerCable"
-                        fieldLabel="Name of Youtube Channel"
-                        name="./channelName"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="TimeWarnerCable"
+                            fieldLabel="Name of Youtube Channel"
+                            name="./channelName"
+                            xtype="textfield"/>
                     <videos
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Number of Videos"
-                        name="./videos"
-                        xtype="multifield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Number of Videos"
+                            name="./videos"
+                            xtype="multifield"/>
                     <errorMsg
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Custom Error Message"
-                        name="./errorMsg"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Custom Error Message"
+                            name="./errorMsg"
+                            xtype="textfield"/>
                 </items>
             </tab1>
         </items>

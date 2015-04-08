@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="cq:Dialog"
-    title="dialog"
-    xtype="dialog">
+          jcr:primaryType="cq:Dialog"
+          title="dialog"
+          xtype="dialog">
     <items
-        jcr:primaryType="cq:Widget"
-        xtype="tabpanel">
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <image
-                jcr:primaryType="cq:Widget"
-                cropParameter="./imageCrop"
-                ddGroups="[media]"
-                fileNameParameter="./fileName"
-                fileReferenceParameter="./fileReference"
-                mapParameter="./imageMap"
-                name="./file"
-                requestSuffix=".img.png"
-                rotateParameter="./imageRotate"
-                title="Image"
-                xtype="html5smartimage"/>
+                    jcr:primaryType="cq:Widget"
+                    cropParameter="./imageCrop"
+                    ddGroups="[media]"
+                    fileNameParameter="./fileName"
+                    fileReferenceParameter="./fileReference"
+                    mapParameter="./imageMap"
+                    name="./file"
+                    requestSuffix=".img.png"
+                    rotateParameter="./imageRotate"
+                    title="Image"
+                    xtype="html5smartimage"/>
             <tab1
-                jcr:primaryType="cq:Panel"
-                title="Text">
+                    jcr:primaryType="cq:Panel"
+                    title="Text">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <title
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Title"
-                        name="./title"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Title"
+                            name="./title"
+                            xtype="textfield"/>
                     <description
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Description"
-                        name="./desc"
-                        xtype="textarea"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Description"
+                            name="./desc"
+                            xtype="textarea"/>
                 </items>
             </tab1>
             <tab2
-                jcr:primaryType="cq:Panel"
-                title="Statistics">
+                    jcr:primaryType="cq:Panel"
+                    title="Statistics">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <country
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Number of Countries"
-                        name="./country"
-                        xtype="numberfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Number of Countries"
+                            name="./country"
+                            xtype="numberfield"/>
                     <branch
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Number of Branches"
-                        name="./branch"
-                        xtype="numberfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Number of Branches"
+                            name="./branch"
+                            xtype="numberfield"/>
                     <unit
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Number of Units"
-                        name="./units"
-                        xtype="numberfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Number of Units"
+                            name="./units"
+                            xtype="numberfield"/>
                     <network
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Distribution Network Number"
-                        name="./network"
-                        xtype="numberfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Distribution Network Number"
+                            name="./network"
+                            xtype="numberfield"/>
                 </items>
             </tab2>
         </items>

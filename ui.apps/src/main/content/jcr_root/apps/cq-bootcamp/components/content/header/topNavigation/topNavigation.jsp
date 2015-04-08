@@ -4,7 +4,7 @@
 <c:set var="pageLevel" value='${currentStyle.pageLevel != null ? currentStyle.pageLevel : "2"}'/>
 <%
     // get starting point of navigation
-    Page navRootPage = currentPage.getAbsoluteParent( Integer.parseInt((String)pageContext.getAttribute("pageLevel")) );
+    Page navRootPage = currentPage.getAbsoluteParent(Integer.parseInt((String) pageContext.getAttribute("pageLevel")));
 
     if (navRootPage == null && currentPage != null) {
         navRootPage = currentPage;
@@ -24,6 +24,7 @@
             %>
             <h5><a href="<%= child.getPath() %>.html"><%=child.getTitle() %>
             </a></h5>
+
             <div class="subNavWrapper">
                 <div class="container">
                     <div class="master">

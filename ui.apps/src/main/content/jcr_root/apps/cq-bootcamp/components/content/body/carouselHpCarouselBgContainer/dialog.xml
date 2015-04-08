@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="cq:Dialog"
-    title="dialog"
-    xtype="dialog">
+          jcr:primaryType="cq:Dialog"
+          title="dialog"
+          xtype="dialog">
     <items
-        jcr:primaryType="cq:Widget"
-        xtype="tabpanel">
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
-                jcr:primaryType="cq:Panel"
-                title="Slides">
+                    jcr:primaryType="cq:Panel"
+                    title="Slides">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <numberOfSlides
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Number of Slides"
-                        name="./slides"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Number of Slides"
+                            name="./slides"/>
                 </items>
             </tab1>
         </items>

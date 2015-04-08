@@ -1,121 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="cq:Dialog"
-    title="dialog"
-    xtype="dialog">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="dialog"
+          xtype="dialog">
     <items
-        jcr:primaryType="cq:Widget"
-        xtype="tabpanel">
+            jcr:primaryType="cq:Widget"
+            xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
-                jcr:primaryType="cq:Panel"
-                title="Settings for Row 1">
+                    jcr:primaryType="cq:Panel"
+                    title="Settings for Row 1">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <icon
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Select the icon for First Row"
-                        name="./icon1"
-                        type="select"
-                        xtype="selection">
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select the icon for First Row"
+                            name="./icon1"
+                            type="select"
+                            xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <icon1
-                                jcr:primaryType="nt:unstructured"
-                                text="icon 1"
-                                value="icn1"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="icon 1"
+                                    value="icn1"/>
                             <icon2
-                                jcr:primaryType="nt:unstructured"
-                                text="Icon 2"
-                                value="icn2"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Icon 2"
+                                    value="icn2"/>
                             <icon3
-                                jcr:primaryType="nt:unstructured"
-                                text="Icon 3"
-                                value="icn3"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Icon 3"
+                                    value="icn3"/>
                         </options>
                     </icon>
                     <title
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Title for First Row"
-                        name="./title1"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Title for First Row"
+                            name="./title1"
+                            xtype="textfield"/>
                     <description
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Description"
-                        name="./desc1"
-                        xtype="textarea"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Description"
+                            name="./desc1"
+                            xtype="textarea"/>
                 </items>
             </tab1>
             <tab2
-                jcr:primaryType="cq:Panel"
-                title="Settings for Row 2">
+                    jcr:primaryType="cq:Panel"
+                    title="Settings for Row 2">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <icon
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Select the icon for Second Row"
-                        name="./icon2"
-                        type="select"
-                        xtype="selection">
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select the icon for Second Row"
+                            name="./icon2"
+                            type="select"
+                            xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <icon1
-                                jcr:primaryType="nt:unstructured"
-                                text="icon 1"
-                                value="icn1"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="icon 1"
+                                    value="icn1"/>
                             <icon2
-                                jcr:primaryType="nt:unstructured"
-                                text="Icon 2"
-                                value="icn2"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Icon 2"
+                                    value="icn2"/>
                             <icon3
-                                jcr:primaryType="nt:unstructured"
-                                text="Icon 3"
-                                value="icn3"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Icon 3"
+                                    value="icn3"/>
                         </options>
                     </icon>
                     <title
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Title for Second Row"
-                        name="./title2"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Title for Second Row"
+                            name="./title2"
+                            xtype="textfield"/>
                     <description
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Description"
-                        name="./desc2"
-                        xtype="textarea"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Description"
+                            name="./desc2"
+                            xtype="textarea"/>
                 </items>
             </tab2>
             <tab3
-                jcr:primaryType="cq:Panel"
-                title="Settings for Row 3">
+                    jcr:primaryType="cq:Panel"
+                    title="Settings for Row 3">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <icon
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Select the icon for Third Row"
-                        name="./icon3"
-                        type="select"
-                        xtype="selection">
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Select the icon for Third Row"
+                            name="./icon3"
+                            type="select"
+                            xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <icon1
-                                jcr:primaryType="nt:unstructured"
-                                text="icon 1"
-                                value="icn1"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="icon 1"
+                                    value="icn1"/>
                             <icon2
-                                jcr:primaryType="nt:unstructured"
-                                text="Icon 2"
-                                value="icn2"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Icon 2"
+                                    value="icn2"/>
                             <icon3
-                                jcr:primaryType="nt:unstructured"
-                                text="Icon 3"
-                                value="icn3"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Icon 3"
+                                    value="icn3"/>
                         </options>
                     </icon>
                     <title
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Title for Third Row"
-                        name="./title3"
-                        xtype="textfield"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Title for Third Row"
+                            name="./title3"
+                            xtype="textfield"/>
                     <description
-                        jcr:primaryType="cq:Widget"
-                        fieldLabel="Enter the Description"
-                        name="./desc3"
-                        xtype="textarea"/>
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Enter the Description"
+                            name="./desc3"
+                            xtype="textarea"/>
                 </items>
             </tab3>
         </items>

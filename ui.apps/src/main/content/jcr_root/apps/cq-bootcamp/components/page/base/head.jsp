@@ -5,7 +5,7 @@
 
     <div class="container">
         <div class="master">
-            <div class="navWrapper" >
+            <div class="navWrapper">
                 <div class="logo">
                     <cq:include path="logo" resourceType="foundation/components/logo"/>
                 </div>
@@ -20,7 +20,7 @@
                             <li class="thrd"></li>
                         </ul>
                     </div>
-                        <cq:include path="Navigation" resourceType="cq-bootcamp/components/content/header/topNavigation"/>
+                    <cq:include path="Navigation" resourceType="cq-bootcamp/components/content/header/topNavigation"/>
                 </div>
             </div>
         </div>

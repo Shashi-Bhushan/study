@@ -13,13 +13,13 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-new hobs.TestSuite("CQ_Bootcamp Tests", {path:"/apps/cq-bootcampl/tests/SampleTests.js", register: true})
+new hobs.TestSuite("CQ_Bootcamp Tests", {path: "/apps/cq-bootcampl/tests/SampleTests.js", register: true})
 
     .addTestCase(new hobs.TestCase("Navigate to root page")
         .navigateTo("/content/cq-bootcamp.html")
         .asserts.location("/content/cq-bootcamp.html", true)
-        .asserts.isTrue(function() {
-			return hobs.find("p").text().contains("This page redirects to English");
+        .asserts.isTrue(function () {
+            return hobs.find("p").text().contains("This page redirects to English");
         })
     )
 

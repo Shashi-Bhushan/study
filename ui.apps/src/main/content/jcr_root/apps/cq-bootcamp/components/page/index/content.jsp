@@ -8,7 +8,7 @@
     <div class="container">
         <div class="master">
             <div class="cardRow" style='height:${auto};'>
-                	<cq:include path="Master Parsys" resourceType="foundation/components/parsys"/>
+                <cq:include path="Master Parsys" resourceType="foundation/components/parsys"/>
             </div>
             <div class="clearFix"></div>
         </div>

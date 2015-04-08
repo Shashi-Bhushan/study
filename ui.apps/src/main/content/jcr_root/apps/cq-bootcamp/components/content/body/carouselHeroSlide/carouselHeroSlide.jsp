@@ -1,7 +1,9 @@
 <%@include file="/apps/cq-bootcamp/global.jsp" %>
 <%@page session="false" %>
 
-<div class="carouselHeroSlide" style='background-image:url(<cq:text property="fileReference" placeholder="/content/dam/cq-bootcamp/spotlight1.jpg" default="/content/dam/cq-bootcamp/spotlight1.jpg"/>); '>
+<div class="carouselHeroSlide"
+     style='background-image:url(<cq:text property="fileReference" placeholder="/content/dam/cq-bootcamp/spotlight1.jpg"
+                                          default="/content/dam/cq-bootcamp/spotlight1.jpg"/>); '>
 
     <div class='spotlightContentLeft <cq:text property="color" placeholder="red" default="red"/>'>
         <div class="content">

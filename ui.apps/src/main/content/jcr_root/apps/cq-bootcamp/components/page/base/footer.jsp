@@ -22,12 +22,12 @@
             </div>
 
             <div class="col">
-				<cq:include path="findUs" resourceType="cq-bootcamp/components/content/footer/findUs"/>
+                <cq:include path="findUs" resourceType="cq-bootcamp/components/content/footer/findUs"/>
             </div>
         </div>
         <div class="copyRightWrapper">
             <div class="left">
-                &copy; Copyright <fmt:formatDate pattern="yyyy" value="${now}" />  by Intelligrape. All rights reserved
+                &copy; Copyright <fmt:formatDate pattern="yyyy" value="${now}"/> by Intelligrape. All rights reserved
             </div>
         </div>
     </div>
