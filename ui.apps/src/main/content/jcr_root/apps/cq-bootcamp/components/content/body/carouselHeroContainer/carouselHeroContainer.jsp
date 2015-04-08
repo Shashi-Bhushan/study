@@ -1,48 +1,25 @@
 <%@include file="/apps/cq-bootcamp/global.jsp" %>
 <%@page session="false" %>
 
-<c:choose>
-    <c:when test="${mode}">
-        <div class="spotlightWrapper ; ">
-            <div class="slick-slider">
-                <c:forEach var="i" begin="1" end="${properties.slides}">
-                    <cq:include path="heroCarousel${i}"
-                                resourceType="cq-bootcamp/components/content/body/carouselHeroSlide"/>
-                </c:forEach>
-            </div>
-        </div>
-        <div class="clearFix"></div>
-    </c:when>
-    <c:otherwise>
-        <c:forEach var="i" begin="1" end="${properties.slides}">
-            <div class="spotlightWrapper">
-                <div class="slick-slider">
-                    <cq:include path="heroCarousel${i}"
-                                resourceType="cq-bootcamp/components/content/body/carouselHeroSlide"/>
-                </div>
-            </div>
-        </c:forEach>
-
-        <div class="clearFix"></div>
-    </c:otherwise>
-</c:choose>
-
+<div class="spotlightWrapper">
+    <div class="slick-slider">
+        <cq:include path="hero-carousel-slide-parsys" resourceType="foundation/components/parsys"/>
+    </div>
+</div>
+<div style="clear:both;"></div>
 <c:if test="${mode}">
     <script>
         $(document).ready(function () {
+            $('.spotLightWrapper .slick-slider .hero-carousel-slide-parsys .new.section').remove();
 
-            $('.spotLightWrapper .slick-slider').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
+            $('.spotLightWrapper .slick-slider .hero-carousel-slide-parsys').slick({
+                slidesToShow: ${properties.showSlides},
+                slidesToScroll: ${properties.scrollSlides},
 
                 dots: true,
-                arrows: false
-
+                arrows: true
             });
-
-            // get dots within the image itself
-            $('.slick-dots').css("bottom", "0px");
-            $('.spotLightWrapper').css("height", "768px");
         });
     </script>
 </c:if>
+<div style="clear:both;"></div>

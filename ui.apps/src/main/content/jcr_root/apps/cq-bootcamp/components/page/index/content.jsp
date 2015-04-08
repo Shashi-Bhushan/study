@@ -2,15 +2,15 @@
 <%@page session="false" %>
 
 <div class="clearFix"></div>
-<div>
-    <cq:include path="HeroCarouselContainerParsys" resourceType="foundation/components/parsys"/>
+<div style='height:${heroCarouselHeight};'>
+    <cq:include path="hero-carousel-container-parsys" resourceType="foundation/components/parsys"/>
 </div>
 
 <div class="homePageWrapper">
     <div class="container">
         <div class="master">
             <div class="cardRow" style='height:${auto};'>
-                <cq:include path="Master Parsys" resourceType="foundation/components/parsys"/>
+                <cq:include path="master-parsys" resourceType="foundation/components/parsys"/>
             </div>
             <div class="clearFix"></div>
         </div>

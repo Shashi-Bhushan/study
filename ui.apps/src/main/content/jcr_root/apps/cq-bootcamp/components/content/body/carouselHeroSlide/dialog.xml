@@ -1,88 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Dialog"
-          title="dialog"
-          xtype="dialog">
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
     <items
-            jcr:primaryType="cq:Widget"
-            xtype="tabpanel">
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
-                    jcr:primaryType="cq:Panel"
-                    title="Slides Data">
+                jcr:primaryType="cq:Panel"
+                title="Slides Data">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <title
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Enter the Title"
-                            name="./title"
-                            xtype="textfield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Title"
+                        name="./title"
+                        xtype="textfield"/>
                     <desc
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Enter the Description"
-                            name="./desc"
-                            xtype="textarea"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Enter the Description"
+                        name="./desc"
+                        xtype="textarea"/>
                     <color
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Color on Left Div Box"
-                            name="./color"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Color on Left Div Box"
+                        name="./color"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <red
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Red"
-                                    value="red"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Red"
+                                value="red"/>
                             <pink
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Pink"
-                                    value="pink"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Pink"
+                                value="pink"/>
                             <blue
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Blue"
-                                    value="blue"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue"
+                                value="blue"/>
                         </options>
                     </color>
                     <links
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Links to be Added"
-                            name="./links"
-                            xtype="multifield"/>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Links to be Added"
+                        name="./links"
+                        xtype="multifield"/>
                     <colorRight
-                            jcr:primaryType="cq:Widget"
-                            fieldLabel="Color on Right Div Box"
-                            name="./colorRight"
-                            type="select"
-                            xtype="selection">
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Color on Right Div Box"
+                        name="./colorRight"
+                        type="select"
+                        xtype="selection">
                         <options jcr:primaryType="cq:WidgetCollection">
                             <red
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Red"
-                                    value="red"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Red"
+                                value="red"/>
                             <pink
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Pink"
-                                    value="pink"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Pink"
+                                value="pink"/>
                             <blue
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Blue"
-                                    value="blue"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Blue"
+                                value="blue"/>
                         </options>
                     </colorRight>
                 </items>
             </tab1>
             <image
-                    jcr:primaryType="cq:Widget"
-                    cropParameter="./imageCrop"
-                    ddGroups="[media]"
-                    fileNameParameter="./fileName"
-                    fileReferenceParameter="./fileReference"
-                    mapParameter="./imageMap"
-                    name="./file"
-                    requestSuffix=".img.png"
-                    rotateParameter="./imageRotate"
-                    title="Image"
-                    xtype="html5smartimage"/>
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
         </items>
     </items>
 </jcr:root>
