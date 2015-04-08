@@ -104,3 +104,13 @@
 .pad {
     padding: 5px;
 }
+
+.errorMsg
+{
+    color: #ff0000;
+}
+
+.status
+{
+    color: green;
+}
