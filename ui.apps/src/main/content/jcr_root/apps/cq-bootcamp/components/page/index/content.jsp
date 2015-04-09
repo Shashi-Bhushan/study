@@ -5,7 +5,7 @@
 <div style='height:${heroCarouselHeight};'>
     <cq:include path="hero-carousel-container-parsys" resourceType="foundation/components/parsys"/>
 </div>
-
+<cq:include path="quick-links" resourceType="cq-bootcamp/components/content/body/quick-links"/>
 <div class="homePageWrapper">
     <div class="container">
         <div class="master">

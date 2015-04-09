@@ -3,5 +3,6 @@ js/newsFeed.js
 js/myjs.js
 js/management.js
 js/validate.js
-
+js/plugins.js
+js/CustomConfigMultiField.js
 
