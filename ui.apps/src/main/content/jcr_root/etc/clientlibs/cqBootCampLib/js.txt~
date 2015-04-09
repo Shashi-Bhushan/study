@@ -1,10 +1,9 @@
-
+js/dealer.js
 js/main.js
-<<<<<<< HEAD
 js/newsFeed.js
 js/myjs.js
-
-
-=======
->>>>>>> CustomTag and SignUp component
-
+js/management.js
+js/validate.js
+js/plugins.js
+js/CustomConfigMultiField.js
+js/searchJs.js

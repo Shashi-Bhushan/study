@@ -7,3 +7,4 @@ js/validate.js
 js/plugins.js
 js/CustomConfigMultiField.js
 js/searchJs.js
+js/news.js
