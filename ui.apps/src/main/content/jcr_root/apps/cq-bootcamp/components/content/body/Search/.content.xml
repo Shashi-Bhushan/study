@@ -3,4 +3,4 @@
     jcr:description="this is Sitewide Search"
     jcr:primaryType="cq:Component"
     jcr:title="Search Content"
-    componentGroup="havells_home"/>
+    componentGroup="CQ BootCamp"/>

@@ -10,11 +10,6 @@
             fieldLabel="Path to search in"
             name="./searchIn"
             xtype="pathfield"/>
-        <searchButtonText
-            jcr:primaryType="cq:Widget"
-            fieldLabel="Search string"
-            name="./stringSearch"
-            xtype="textfield"/>
         <noResultsText
             jcr:primaryType="cq:Widget"
             fieldLabel="No results text"

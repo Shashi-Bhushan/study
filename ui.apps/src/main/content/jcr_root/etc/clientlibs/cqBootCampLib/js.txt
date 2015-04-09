@@ -6,4 +6,4 @@ js/management.js
 js/validate.js
 js/plugins.js
 js/CustomConfigMultiField.js
-
+js/searchJs.js

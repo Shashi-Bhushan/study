@@ -119,7 +119,7 @@ $(function () {
         });
     }
     //form validation
-    $('form').each(function () {
+   /* $('form').each(function () {
         $(this).validate({
             highlight: function (element) {
                 $(element).addClass("validation-error");
@@ -131,7 +131,7 @@ $(function () {
                 return true;
             }
         });
-    });
+    }); */
     //DOB
     //$( ".dob" ).datepicker({dateFormat: 'dd-mm-yy'});
 

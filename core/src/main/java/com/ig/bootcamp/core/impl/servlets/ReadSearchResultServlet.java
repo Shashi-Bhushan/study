@@ -4,13 +4,13 @@ import com.ig.bootcamp.core.impl.SearchInterface;
 import org.apache.felix.scr.annotations.*;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.commons.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.Servlet;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @Component(name = "Search component", description = "this is a component to fetch searches", enabled = true, immediate = true, metatype = true)
 @Service(Servlet.class)
@@ -18,25 +18,26 @@ import java.io.PrintWriter;
         @Property(name = "sling.servlet.paths", value = "/bin/service/search"),
 }
 )
-public class ReadSearchResult extends SlingSafeMethodsServlet {
+public class ReadSearchResultServlet extends SlingSafeMethodsServlet {
     @Reference
     SearchInterface searchInterface;
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(ReadSearchResultServlet.class);
+
+    @Override
     protected void doGet(SlingHttpServletRequest request,
                          SlingHttpServletResponse response) throws IOException {
-        response.setContentType("application/json");
-        response.setCharacterEncoding("UTF-8");
-        JSONObject jsonObject;
-        String path = request.getParameter("path");
-        String search = request.getParameter("search");
-        String searchQuery = "SELECT * FROM [cq:Page] AS s WHERE ISDESCENDANTNODE([" + path + "]) and CONTAINS(s.*, '" + search + "')";
         try {
-            jsonObject = searchInterface.searchFunction(path, searchQuery, request);
-            response.getWriter().write(jsonObject.toString());
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            String path = request.getParameter("path");
+            String searchThis = request.getParameter("searchThis");
+            LOGGER.info("path---" + path);
+            LOGGER.info("search----" + searchThis);
+            response.getWriter().write(searchInterface.searchFunction(path, searchThis, request).toString());
 
         } catch (Exception e) {
-            log(e.toString());
+            log("---Exception occured", e);
         }
-
     }
 }

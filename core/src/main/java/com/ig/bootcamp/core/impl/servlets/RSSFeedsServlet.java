@@ -1,13 +1,5 @@
 package com.ig.bootcamp.core.impl.servlets;
 
-/**
- * Created with IntelliJ IDEA.
- * User: shashi
- * Date: 3/15/15
- * Time: 7:27 PM
- * To change this template use File | Settings | File Templates.
- */
-
 import com.day.cq.wcm.api.NameConstants;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
@@ -27,15 +19,6 @@ import org.slf4j.LoggerFactory;
 
 import javax.servlet.Servlet;
 import java.io.IOException;
-
-/**
- * Created with IntelliJ IDEA.
- * User: intelligrape
- * Date: 3/3/15
- * Time: 11:32 AM
- * To change this template use File | Settings | File Templates.
- */
-
 
 @Component(name = "RSS Component", description = "This is a component, which returns newsfeed in RSS Format", immediate = true, metatype = true)
 @Service(Servlet.class)

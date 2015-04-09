@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var stockName = $("#stockName").val();
     var stockStatus;
-
     $.ajax({
         type: "get",
         url: "http://finance.google.com/finance/info?client=ig&q=" + stockName,
@@ -18,6 +17,7 @@ $(document).ready(function () {
         error: function (data) {
             console.log("Error Occured");
         }
+
     });
 });
 

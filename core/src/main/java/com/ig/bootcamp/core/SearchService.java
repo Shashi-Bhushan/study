@@ -18,19 +18,20 @@ import java.util.Iterator;
 @Service(SearchInterface.class)
 public class SearchService implements SearchInterface {
     @Override
-    public JSONObject searchFunction(String path, String searchQuery, SlingHttpServletRequest request) throws JSONException {
+    public JSONObject searchFunction(String path, String searchThis, SlingHttpServletRequest request) throws JSONException {
+        String searchQuery = "SELECT * FROM [cq:Page] AS s WHERE ISDESCENDANTNODE([" + path + "]) and CONTAINS(s.*, '" + searchThis + "')";
         ResourceResolver resourceResolver = request.getResourceResolver();
         Iterator<Resource> result = resourceResolver.findResources(searchQuery, Query.JCR_SQL2);
         JSONObject jsonObject = new JSONObject();
         JSONArray jsonArray = new JSONArray();
-        JSONObject jsonObject1;
+        JSONObject json;
         while (result.hasNext()) {
-            Resource res = result.next();
-            Page page = res.adaptTo(Page.class);
-            jsonObject1 = new JSONObject();
-            jsonObject1.put("path", page.getPath());
-            jsonObject1.put("title", page.getTitle());
-            jsonArray.put(jsonObject1);
+            Resource resultResource = result.next();
+            Page page = resultResource.adaptTo(Page.class);
+            json = new JSONObject();
+            json.put("path", page.getPath());
+            json.put("title", page.getTitle());
+            jsonArray.put(json);
         }
         jsonObject.put("data", jsonArray);
         return jsonObject;
