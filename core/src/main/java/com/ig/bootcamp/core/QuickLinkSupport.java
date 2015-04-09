@@ -46,13 +46,12 @@ public class QuickLinkSupport {
 
         this.resourceResolver = resourceResolver;
         this.path = path;
-        populate(this.path, this.resourceResolver);
+        populateList(this.path, this.resourceResolver);
 
     }
 
-    public void populate(String path, ResourceResolver resourceResolver) {
+    public void populateList(String path, ResourceResolver resourceResolver) {
         Resource resource = resourceResolver.getResource(path);
-        System.out.println("Hey this is my resource ---" + resource.toString());
         Resource child = resource.getChild("sublinks");
 
         for (Resource subchild : child.getChildren()) {
