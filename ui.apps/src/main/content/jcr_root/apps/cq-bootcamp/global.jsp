@@ -74,13 +74,13 @@
 <%@ page import="com.day.cq.wcm.api.WCMMode" %>
 <c:set var="now" value="<%=new java.util.Date()%>"/>
 <%
-    WCMMode mode = WCMMode.fromRequest(request);
+    WCMMode isPreview = WCMMode.fromRequest(request);
 %>
 <%--TRUE if Preview--%>
-<c:set var="mode" value="<%=WCMMode.fromRequest(request) == WCMMode.PREVIEW%>"/>
+<c:set var="isPreview" value="<%=WCMMode.fromRequest(request) == WCMMode.PREVIEW%>"/>
 
 <c:choose>
-    <c:when test="${mode}">
+    <c:when test="${isPreview}">
         <c:set var="height" value="height"/>
         <c:set var="heroCarouselHeight" value="567px"/>
     </c:when>

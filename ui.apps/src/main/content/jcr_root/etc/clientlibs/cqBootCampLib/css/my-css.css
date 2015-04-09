@@ -18,6 +18,10 @@
 
 }
 
+.slick-dots {
+    bottom: 0px;
+}
+
 .height {
     height: 267px;
 }

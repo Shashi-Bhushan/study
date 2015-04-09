@@ -187,6 +187,7 @@
 }
 
 .hpCarouselBg .slick-prev, .hpCarouselBg .slick-next, .hpCarouselBg .slick-prev:hover, .hpCarouselBg .slick-next:hover {
+
     background: url(../img/home-pg-carousel-arrow.png) 0 0 no-repeat;
     width: 19px;
     height: 56px;
@@ -227,6 +228,7 @@
     right: 0px;
     top: 55px;
     background: url(../img/hp-carousel-icon-sprite.png) #e02626 50% 0 no-repeat;
+
 }
 
 .hpCarouselBgIcon.icn1 {
