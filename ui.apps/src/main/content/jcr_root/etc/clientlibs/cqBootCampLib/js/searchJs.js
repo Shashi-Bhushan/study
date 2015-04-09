@@ -4,7 +4,7 @@ $(document).ready(function () {
         var path = $("#path").val();
         var searchThis = $("#searchThis").val();
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             url: "/bin/service/search",
             data: $('form').serialize(),
             dataType: "json",
