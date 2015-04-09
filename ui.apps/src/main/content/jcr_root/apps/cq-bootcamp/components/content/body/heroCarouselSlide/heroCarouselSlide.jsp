@@ -11,8 +11,8 @@
                 <div class="carouselHeroSlide">
             </c:when>
             <c:otherwise>
-                <%-- other wise shwo image --%>
-                <div class="carouselHeroSlide cq-image-placeholder">
+                <%-- other wise show image --%>
+                <div class="carouselHeroSlide carouselHeroBgImg">
             </c:otherwise>
         </c:choose>
     </c:when>
@@ -21,7 +21,6 @@
         <div class="carouselHeroSlide" style='background-image:url(${properties.fileReference}); '>
     </c:otherwise>
 </c:choose>
-
 
 <div class='spotlightContentLeft <cq:text property="color" placeholder="red" default="red"/>'>
     <div class="content">

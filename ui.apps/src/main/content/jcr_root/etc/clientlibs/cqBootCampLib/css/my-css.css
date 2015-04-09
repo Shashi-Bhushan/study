@@ -35,8 +35,13 @@
 }
 
 .carouselHeroSlide {
-    height: 100%;
+    height: 567px;
     background-size: 100% 100%
+}
+
+.carouselHeroBgImg{
+    background: url(/libs/cq/ui/widgets/themes/default/placeholders/img.png);
+    background-repeat: no-repeat
 }
 
 .carouselHpCarouselBgContainer {

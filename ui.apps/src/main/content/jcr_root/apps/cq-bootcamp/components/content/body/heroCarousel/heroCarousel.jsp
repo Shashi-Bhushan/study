@@ -2,7 +2,7 @@
 <%@page session="false" %>
 
 <div class="spotlightWrapper">
-    <div class="slick-slider">
+    <div class="slick-slider" >
         <cq:include path="hero-carousel-slide-parsys" resourceType="foundation/components/parsys"/>
     </div>
 </div>
