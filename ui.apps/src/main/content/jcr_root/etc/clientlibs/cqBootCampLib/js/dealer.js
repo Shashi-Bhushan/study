@@ -11,7 +11,7 @@
                 {
                     $("#state").append("<option value="+item.id+">"+item.name+"</option>");});  },
             error:function(){
-            console.log("error");
+            //console.log("error");
             }
         });
             $( "#state" ).change(function() {
@@ -34,7 +34,7 @@
                         });   }, 
 
                     error:function (){
-                         console.log("error");
+                         //console.log("error");
 
                     }  }); }
                 else

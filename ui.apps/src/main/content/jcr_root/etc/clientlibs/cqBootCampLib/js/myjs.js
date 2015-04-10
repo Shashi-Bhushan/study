@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         },
         error: function (data) {
-            console.log("Error Occured");
+            //console.log("Error Occured");
         }
 
     });

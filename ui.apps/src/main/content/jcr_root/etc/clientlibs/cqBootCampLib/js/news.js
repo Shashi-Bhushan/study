@@ -21,7 +21,7 @@ $(document).ready(function () {
                 });
             },
             error: function () {
-                console.log("Error occured");
+                //console.log("Error occured");
             }
         });
     }, 1000);

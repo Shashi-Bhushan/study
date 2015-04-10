@@ -1,0 +1,66 @@
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="My dynamic dialog"
+    width="1000"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab2
+                jcr:primaryType="cq:Panel"
+                title="tab2">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <selection
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="option1"
+                        fieldLabel="choose field to show"
+                        name="./tf"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <option1
+                                jcr:primaryType="nt:unstructured"
+                                text="field set 1"
+                                value="fs1"/>
+                            <option2
+                                jcr:primaryType="nt:unstructured"
+                                text="field set 2"
+                                value="fs2"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field, rec, path){Toogle.manageFields(field);}"
+                            selectionchanged="function(field, value){Toogle.manageFields(field);}"/>
+                    </selection>
+                    <fs1
+                        jcr:primaryType="cq:Widget"
+                        hidden="{Boolean}true"
+                        itemId="fs1"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <text1
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="TextField1"
+                                name="./text1"
+                                xtype="textfield"/>
+                        </items>
+                    </fs1>
+                    <fs2
+                        jcr:primaryType="cq:Widget"
+                        hidden="{Boolean}true"
+                        itemId="fs2"
+                        xtype="dialogfieldset">
+                        <items jcr:primaryType="cq:WidgetCollection">
+                            <text2
+                                jcr:primaryType="cq:Widget"
+                                fieldLabel="TextField2"
+                                name="./text2"
+                                xtype="textfield"/>
+                        </items>
+                    </fs2>
+                </items>
+            </tab2>
+        </items>
+    </items>
+</jcr:root>
