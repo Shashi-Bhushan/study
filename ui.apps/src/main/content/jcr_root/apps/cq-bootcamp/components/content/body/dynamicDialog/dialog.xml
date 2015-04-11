@@ -1,41 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
-    title="Dynamic Dialog"
-    width="1000"
-    xtype="dialog">
-    <items
-        jcr:primaryType="cq:Widget"
-        xtype="tabpanel">
-        <items jcr:primaryType="cq:WidgetCollection">
-            <tab1
-                jcr:primaryType="cq:Panel"
-                title="Details">
-                <items jcr:primaryType="cq:WidgetCollection">
-                    <selection
-                        jcr:primaryType="cq:Widget"
-                        defaultValue="option1"
-                        fieldLabel="Choose Fields to show"
-                        name="./tf"
-                        type="select"
-                        xtype="selection">
-                        <options jcr:primaryType="cq:WidgetCollection">
-                            <option1
-                            	jcr:primaryType="nt:unstructured"
-                                text="Field Set 1"
-                                value="fs1"/>
-                            <option2
-                                 jcr:primaryType="nt:unstructured"
-                                 text="Field Set 2"
-                                 value="fs2"/>
-							<listeners
-								jcr:primaryType="nt:unstructured"
-								loadcontent="function(field,rec,path){console.log('Calling Service');Toggle.manageFields(field);}"
-								selectionchanged="function(field, value){console.log('Changed');Toggle.manageFields(field);}"/>
-                        </options>
-                    </selection>
-                </items>
-            </tab1>
-        </items>
+    helpPath="en/cq/current/wcm/default_components.html#List"
+    manageTabs="function(tab,noSwitch){var tabs=['props','children','descendants','static','search','querybuilder','tags'];var index=tabs.indexOf(tab);if(index==-1) return;for(var i=1;i&lt;tabs.length;i++){if(index==i){this.unhideTabStripItem(i);}else{this.hideTabStripItem(i);}}this.doLayout();if(!noSwitch)this.activate(index);}"
+    title="List"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <list
+            jcr:primaryType="cq:Widget"
+            title="List"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <listFrom
+                    jcr:primaryType="cq:Widget"
+                    defaultValue=""
+                    fieldLabel="Build list using"
+                    name="./listFrom"
+                    type="select"
+                    xtype="selection">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                        selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <descendants
+                            jcr:primaryType="nt:unstructured"
+                            text="Descendant pages"
+                            value="descendants"/>
+                        <children
+                            jcr:primaryType="nt:unstructured"
+                            text="Child pages"
+                            value="children"/>
+                    </options>
+                </listFrom>
+                <fieldSelection
+                    jcr:primaryType="cq:Widget"
+                    defaultValue="option1"
+                    fieldLabel="Choose Fields to show"
+                    name="./tf"
+                    type="select"
+                    xtype="selection">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        loadcontent="function(field,rec,path){Toggle.manageFields(field);}"
+                        selectionchanged="function(field, value){Toggle.manageFields(field);}"/>
+                    <options jcr:primaryType="cq:WidgetCollection">
+                        <option1
+                            jcr:primaryType="nt:unstructured"
+                            text="Field Set 1"
+                            value="fs1"/>
+                        <option2
+                            jcr:primaryType="nt:unstructured"
+                            text="Field Set 2"
+                            value="fs2"/>
+                    </options>
+                </fieldSelection>
+                <fs1
+                    jcr:primaryType="cq:Widget"
+                    hidden="{Boolean}true"
+                    itemId="fs1"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <text1
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="TextField - FieldSet1"
+                            name="./text1"
+                            xtype="textfield"/>
+                    </items>
+                </fs1>
+                <fs2
+                    jcr:primaryType="cq:Widget"
+                    hidden="{Boolean}true"
+                    itemId="fs2"
+                    xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <text2
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="TextField - FieldSet2"
+                            name="./text2"
+                            xtype="textfield"/>
+                    </items>
+                </fs2>
+            </items>
+        </list>
+        <tab2
+            jcr:primaryType="cq:Panel"
+            title="Text Tab">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <text
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="TextField of Text Tab"
+                    name="./text"
+                    xtype="textfield"/>
+            </items>
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+        </tab2>
+        <image
+            jcr:primaryType="cq:Widget"
+            cropParameter="./imageCrop"
+            ddGroups="[media]"
+            fileNameParameter="./fileName"
+            fileReferenceParameter="./fileReference"
+            mapParameter="./imageMap"
+            name="./file"
+            requestSuffix=".img.png"
+            rotateParameter="./imageRotate"
+            title="Image Tab"
+            xtype="html5smartimage">
+            <listeners
+                jcr:primaryType="nt:unstructured"
+                render="function() { this.findParentByType('tabpanel').hideTabStripItem(1); }"/>
+        </image>
     </items>
 </jcr:root>

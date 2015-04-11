@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Dynamic Dialog"
+    width="1000"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Details">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <tabSelection
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="option1"
+                        fieldLabel="Choose Tab to Show"
+                        name="./ts"
+                        type="select"
+                        xtype="selection">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(field,rec,path){Toggle.manageTabs(field,true);}"
+                            selectionchanged="function(field, value){Toggle.manageTabs(field,value);}"/>
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <option1
+                                jcr:primaryType="nt:unstructured"
+                                text="Text Tab"
+                                value="textTab"/>
+                            <option2
+                                jcr:primaryType="nt:unstructured"
+                                text="Image Tab"
+                                value="imageTab"/>
+                        </options>
+                    </tabSelection>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
