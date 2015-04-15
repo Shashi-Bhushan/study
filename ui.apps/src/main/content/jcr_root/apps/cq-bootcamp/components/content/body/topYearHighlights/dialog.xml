@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="topYearHighlightsComponentLabel"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <highlights
+            jcr:primaryType="cq:Widget"
+            title="topYearHighlightsPanelLabel"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <digitalSmithPage
+                    jcr:primaryType="cq:Widget"
+                    allowBlank="{Boolean}false"
+                    autoDelete="{Boolean}true"
+                    fieldLabel="digitalSmithPathLabel"
+                    grow="{Boolean}false"
+                    name="./digitalSmithPage"
+                    width="{Long}50"
+                    xtype="pathfield"/>
+                <years
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Click(+) to add a year highlight link."
+                    fieldLabel="Year"
+                    name="./season"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}false"
+                        fieldLabel="seasonYearLabelText"
+                        options="$PATH.seasonOptions.json"
+                        type="select"
+                        xtype="selection"/>
+                </years>
+            </items>
+        </highlights>
+    </items>
+</jcr:root>
